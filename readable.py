@@ -42,7 +42,6 @@ def textCleaner(paragraph):
 
     return finalParagraph
 
-
 def basicEnglishChecker(checker):
     isBasic = False
 
@@ -65,17 +64,18 @@ def basicEnglishChecker(checker):
     return isEnglish, isBasic
 
 # The purpose of this section is to import a list of basic English words, clean it, and sort it.
-basicWords_file = open("/home/atahmid/PycharmProjects/readable/basic_wordlist", "r")
+basicWords_file = open("basic_wordlist", "r")
 basicWords = basicWords_file.readlines()
 
 for i in range(len(basicWords)):
     basicWords[i] = basicWords[i].lower()
     basicWords[i] = basicWords[i].rstrip("\n")
-basicWords.sort()
+basicWords.sort()y
+
 
 # Now we want to do the same with all words in English.
 
-allEnglish_file = open("/home/atahmid/PycharmProjects/readable/all_english", "r")
+allEnglish_file = open("all_english", "r")
 allEnglish = allEnglish_file.readlines()
 
 for i in range(len(allEnglish)):
@@ -84,7 +84,7 @@ for i in range(len(allEnglish)):
 allEnglish.sort()
 
 # Now we import the article
-article_file = open("/home/atahmid/PycharmProjects/readable/article", "r")
+article_file = open("article", "r")
 article_whole = article_file.read()
 
 article = textCleaner(article_whole)
