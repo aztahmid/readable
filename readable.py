@@ -70,7 +70,7 @@ basicWords = basicWords_file.readlines()
 for i in range(len(basicWords)):
     basicWords[i] = basicWords[i].lower()
     basicWords[i] = basicWords[i].rstrip("\n")
-basicWords.sort()y
+basicWords.sort()
 
 
 # Now we want to do the same with all words in English.
